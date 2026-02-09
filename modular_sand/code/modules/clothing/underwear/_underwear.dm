@@ -39,3 +39,7 @@
 		if(istype(I) && ((I.body_parts_covered & FEET) || (I.flags_inv & HIDEUNDERWEAR)))
 			return TRUE
 	return FALSE
+
+/obj/item/clothing/underwear/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/trash)
