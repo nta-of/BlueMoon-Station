@@ -16,6 +16,10 @@
 	create_reagents(300, DRAWABLE|NO_REACT)
 	. = ..()
 
+/obj/item/genital_equipment/condom/ComponentInitialize()
+	. = ..()
+	AddElement(/datum/element/trash)
+
 /obj/item/genital_equipment/condom/item_inserting(datum/source, obj/item/organ/genital/G, mob/user)
 	. = TRUE
 
@@ -94,8 +98,3 @@
 	mob_overlay_icon = 'modular_splurt/icons/obj/clothing/head.dmi'
 	icon_state = "b_condom_out"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 5, "rad" = 0, "fire" = 0, "acid" = 0)
-
-
-/obj/item/genital_equipment/condom/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/trash)
