@@ -1,6 +1,18 @@
 /datum/element/trash
 	element_flags = ELEMENT_DETACH
 
+/////// предметы что можно съесть
+
+/obj/item/genital_equipment/condom/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/trash)
+
+/obj/item/clothing/underwear/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/trash)
+
+////////  
+
 /datum/element/trash/Attach(datum/target)
 	. = ..()
 	RegisterSignal(target, COMSIG_ITEM_ATTACK, PROC_REF(UseFromHand))
