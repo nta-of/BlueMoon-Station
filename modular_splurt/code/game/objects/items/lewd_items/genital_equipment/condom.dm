@@ -16,10 +16,6 @@
 	create_reagents(300, DRAWABLE|NO_REACT)
 	. = ..()
 
-/obj/item/genital_equipment/condom/ComponentInitialize()
-	. = ..()
-	AddElement(/datum/element/trash)
-
 /obj/item/genital_equipment/condom/item_inserting(datum/source, obj/item/organ/genital/G, mob/user)
 	. = TRUE
 
